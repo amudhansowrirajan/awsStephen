@@ -1,26 +1,27 @@
 <html>
-    <head>
-        <title>My First Webpage</title>
-    </head>
-    <body>
-        <h1>I love coffee</h1>
-        <p>Hello world!</p>
-    </body>
+  <head>
+    <title>My First Webpage</title>
+  </head>
+  <body>
+    <h1>I love coffee</h1>
+    <p>Hello world!</p>
+  </body>
 
-    <img src="coffee.jpg" width=500/>
+  <img src="coffee.jpg" width="500" />
 
-    <!-- CORS demo -->
-    <!-- <div id="tofetch"/>
-    <script>
-        var tofetch = document.getElementById("tofetch");
+  <!-- CORS demo -->
+  <div id="tofetch" />
+  <script>
+    var tofetch = document.getElementById("tofetch");
 
-        fetch('extra-page.html')
-        .then((response) => { 
-            return response.text();
-        })
-        .then((html) => {
-            tofetch.innerHTML = html     
-        });
-    </script> -->
+    fetch(
+      "http://demoawstudents.s3-website.ap-south-1.amazonaws.com/extra-page.html"
+    )
+      .then((response) => {
+        return response.text();
+      })
+      .then((html) => {
+        tofetch.innerHTML = html;
+      });
+  </script>
 </html>
-
